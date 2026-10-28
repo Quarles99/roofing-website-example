@@ -27,6 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img, svg { max-width: 100%; display: block; }
+.photo { width: 100%; height: 100%; object-fit: cover; background: #cfd6dd; }
 a { color: var(--copper-dark); }
 h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0 0 .5em; letter-spacing: -.01em; }
 h1 { font-size: clamp(2rem, 5.5vw, 3.4rem); font-weight: 800; }
@@ -94,7 +95,7 @@ p { margin: 0 0 1em; }
 .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding: clamp(48px, 8vw, 96px) 0 clamp(90px, 12vw, 140px); position: relative; z-index: 1; }
 .hero .eyebrow { color: #f2a582; }
 .hero p.lede { color: #cfd8e3; }
-.hero-art { border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, .3); }
+.hero-art { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, .3); }
 .trust { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; padding: 0; list-style: none; color: #dbe3ec; font-weight: 600; font-size: .95rem; }
 .trust li::before { content: "✓"; color: #f2a582; margin-right: 6px; }
 
@@ -143,7 +144,7 @@ p { margin: 0 0 1em; }
 /* Service detail rows */
 .service { display: grid; grid-template-columns: 220px 1fr; gap: 28px; padding: 32px 0; border-bottom: 1px solid var(--line); }
 .service:last-child { border-bottom: 0; }
-.service-art { border-radius: var(--radius); overflow: hidden; }
+.service-art { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; }
 .service h2 { font-size: 1.6rem; }
 .service ul { padding-left: 20px; color: var(--ink-soft); }
 
@@ -153,9 +154,7 @@ p { margin: 0 0 1em; }
 .filters button[aria-pressed="true"] { background: var(--slate); color: #fff; border-color: var(--slate); }
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .project { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-.project .pair { display: grid; grid-template-columns: 1fr 1fr; }
-.project .pair figure { margin: 0; position: relative; }
-.project .pair figcaption { position: absolute; top: 8px; left: 8px; background: rgba(0, 0, 0, .65); color: #fff; font: 700 .7rem/1 var(--body); letter-spacing: .06em; text-transform: uppercase; padding: 5px 7px; border-radius: 4px; }
+.project-photo { aspect-ratio: 4 / 3; }
 .project-body { padding: 16px 18px; }
 .project-body h3 { margin-bottom: .2em; font-size: 1.05rem; }
 .project-body p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
